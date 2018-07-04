@@ -1,0 +1,368 @@
+body{
+  background: $white;
+  margin: 0px;
+  padding: 0px;
+  color: $body-color;
+  font-family: $body-font;
+  font-size: 0.875rem;
+  line-height: $body-line-height;
+  word-wrap: break-word;
+}
+a{
+  text-decoration: none;
+  &:hover, &:focus{
+    text-decoration: none;
+    outline: 0;
+  }
+}
+a.text-primary{
+  &:hover, &:focus{
+    color: $primary !important;
+  }
+}
+.line-height-1
+{
+  line-height: 1;
+}
+/*=============== Color Css ==========================*/
+.text-muted{
+  color: #a8a8a8;
+}
+.text-primary{
+  color: $primary !important;
+}
+
+.text-success{
+  color: $success !important;
+}
+
+.text-danger{
+  color: $danger !important;
+}
+
+.text-dark{
+  color: $dark !important;
+}
+
+.text-light{
+  color: $body-color !important;
+}
+a.text-light{
+  &:focus, &:hover{
+    color: $body-color !important;
+  }
+}
+.lead{
+  color: #979797;
+  font-weight: 400;
+}
+
+.text-secondary{
+  color: $secondary !important;
+}
+
+/*=============== Background Color Css ==========================*/
+.bg-light{
+  background-color: $light !important;
+}
+
+.bg-primary{
+  background-color: $primary !important;
+}
+
+.bg-dark{
+  background-color: $dark !important;
+}
+
+.bg-secondary{
+  background-color: $secondary !important;
+}
+
+/*=============== Heading Css ==========================*/
+h1, h2, h3, h4, h5, h6 {
+  color: $dark;
+  margin: 0 0 18px;
+  font-family: $heading-font;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/*=============== Font Family ==========================*/
+.Montserrat{
+  font-family: $heading-font;
+}
+.roboto{
+  font-family: $Roboto;
+}
+.open-sans{
+  font-family: $body-font;
+}
+
+/*=============== Font Weight ==========================*/
+.jio-font-weight-500{
+  font-weight: 500;
+}
+
+.heading-title{
+  &:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom:  0;
+    width: 75px;
+    background-color: $primary;
+    height: 4px;
+  }
+}
+
+/*=============== Border Color css ==========================*/
+.brd-light{
+  border-color: $brd-light !important;
+}
+
+.border-radius-50{
+  border-radius: 50px;
+}
+hr{
+  border-color: $brd-light !important;
+}
+
+/*===========Buttons ==============*/
+.btn{
+  position: relative;
+  transition: all .3s ease;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  border-width: 2px;
+  font-family: $Roboto;
+  text-transform: uppercase;
+  &:focus{ box-shadow: none;}
+}
+.btn-primary{
+  background-color: $primary;
+  border-color: $primary;
+  &:hover, &:focus, &:active{
+    background-color: $primary !important;
+    border-color: $primary !important;
+  }
+}
+.btn-outline-primary{
+  border-color: $primary;
+  color: $primary;
+  &:hover, &:focus, &:active{
+    background-color: $primary !important;
+    border-color: $primary !important;
+  }
+}
+.btn-secondary{
+  background-color: $secondary;
+  border-color: $secondary;
+  &:hover, &:focus, &:active{
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+  }
+}
+.btn-outline-secondary{
+  border-color:$secondary;
+  color: $secondary;
+  &:hover, &:focus, &:active{
+    background-color: $secondary !important;
+    border-color: $secondary !important;
+  }
+}
+
+.btn-sm {
+  padding: 0rem 1.5rem;
+  line-height: 2.5rem;
+}
+.btn-xs {
+  padding: 0rem 1rem;
+  line-height: 2rem;
+}
+.btn-default{
+  padding: 0rem 2rem;
+  line-height: 2.5rem;
+}
+.btn-lg {
+  line-height: 3rem;
+  padding: 0rem 2rem;
+}
+
+/*======================== Form Css ===============================*/
+.form-control {
+  height: 61px;
+  color: $secondary;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-family: $heading-font;
+  font-weight: 500;
+  background-color: #f6f6f6;
+  &:focus{
+    border-color: $brd-light !important;
+    box-shadow: none;
+    background-color: #f6f6f6;
+  }
+}
+select.form-control:not([size]):not([multiple]){
+  height: 61px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url(../images/arrow.png) no-repeat 96%;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+textarea.form-control{
+  height: 160px !important;
+  resize: none;
+  padding-top: 18px;
+}
+
+.heading-title{
+
+}
+.form-icon{
+  position: absolute;
+  left: 18px;
+  top: 17px;
+}
+
+/*======================== Bedge Css===============================*/
+.badge {
+  padding: .75em .9em;
+  font-weight: 400;
+}
+.badge-secondary{
+  background-color: #333;
+}
+.badge-danger{
+  background-color: #ed1c24;
+}
+
+.social-icon{
+  a{
+    background-color: #ebebeb;
+    color: $body-color;
+    transition: all 0.9s ease;
+    padding: 5px 8px;
+    border-radius: 3px;
+    &:hover{
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+/*======================== line-height Css===============================*/
+.jio-line-height-1{ line-height: 1 !important; }
+
+.jio-line-height-1_5{ line-height: 1.5 !important; }
+
+.jio-line-height-1_8{ line-height: 1.8 !important; }
+
+.jio-line-height-2{ line-height: 2 !important; }
+
+.jio-line-height-2_5{ line-height: 2.5 !important; }
+
+.jio-line-height-3{ line-height: 3 !important; }
+
+.jio-line-height-3_5{ line-height: 3.5 !important; }
+
+.jio-line-height-4{ line-height: 4 !important; }
+
+/*=========== Background image Css ==============*/
+.background-image-maker {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/*=========== Blockquote ==============*/
+blockquote{
+  p{
+    padding: 0 9px;
+    &:before, &:after{
+      position: absolute;
+    }
+    &:before {
+      content: "\201C";
+      top: auto;
+      left: 0px;
+    }
+    &:after {
+      content: "\201D";
+    }
+  }
+  .blockquote-footer{
+    color: $dark;
+    font-size: 20px;
+    &:before{
+      color: $primary;
+      margin-right: 15px;
+    }
+  }
+}
+.h-0 {
+  height: 0;
+}
+
+/*=========== Gradient ==============*/
+.gradient:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.gradient-bt:before {
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+.gradient-lr:before {
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+.gradient-full:before{
+  background-color: rgba(255, 180, 38, .85);
+}
+.gradient-full-white:before{
+  background-color: rgba(255, 255, 255, .75);
+}
+
+/*=========== Check Box ==============*/
+[type=checkbox]+label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+[type=checkbox]+label:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #e6e6e6;
+}
+[type=checkbox]:checked+label:before {
+  content: "\efae";
+  position: absolute;
+  font-family: 'IcoFont' !important;
+  top: 0;
+  left: 0;
+  border: 0
+}
+.mb-15
+{
+  margin-bottom: 30px;
+}

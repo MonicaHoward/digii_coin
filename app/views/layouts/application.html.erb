@@ -1,14 +1,283 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="dist/images//favicon.ico" type="image/x-icon">
+
     <title>DigiiCoin</title>
+
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <!-- Login /Register Form-->
+  <div id="modal" class="popupContainer">
+    <header class="popupHeader">
+      <span class="modal_close"><i class="fa fa-times"></i></span>
+    </header>
+    <div class="popupBody">
+      <!-- Username & Password Login form -->
+      <div class="user_login">
+        <section class="p-0">
+          <div class="background-image-maker gradient gradient-full rounded"></div>
+          <div class="holder-image">
+            <img src="dist/images/bg2.jpg" alt="" class="img-fluid d-none">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 text-white px-0">
+                <div class="p-5">
+                  <div class="heading pb-4">
+                    <h1 class="mb-2 text-white">Welcome.</h1>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt vivamus elementum.
+                  </div>
+                  <div class="list-vertical position-relative">
+                    <div class="media pb-5">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-pencil-alt-1"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Sign Up with Jioexchange</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                    <div class="media pb-5">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-ui-user"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Sign In Account</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                    <div class="media">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-cart"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Buy / Sell Bitcoin</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 px-0">
+                <div class="p-5 bg-white rounded-right">
+                  <div class="heading pb-4">
+                    <h2 class="mb-2">Sign In</h2>
+                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend enim. Liquam lorem ante dapibus in viverra.
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="text" class="form-control brd-light rounded-0 pl-5" placeholder="User name">
+                    <div class="form-icon">
+                      <i class="icofont icofont-user-alt-7"></i>
+                    </div>
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="password" class="form-control brd-light rounded-0 pl-5" placeholder="Password">
+                    <div class="form-icon">
+                      <i class="icofont icofont-key"></i>
+                    </div>
+                  </div>
+                  <div class="clearfix my-3">
+                    <div class="float-sm-left text-center text-sm-left">
+                      <div class="check d-inline-block mr-2">
+                        <input type="checkbox" id="checkbox11">
+                        <label for="checkbox11" class="mb-0">Remember Me</label>
+                      </div>
+                    </div>
+                    <div class="float-sm-right text-center text-sm-right">
+                      <a href="javascript:;" class="text-light roboto">Forget Password</a>
+                    </div>
+                  </div>
+                  <div class="clearfix my-3">
+                    <a href="#" class="btn btn-primary btn-block btn-lg rounded-0">Sign In</a>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-center or mx-auto bg-white">Or</div>
+                  <div class="social-buttons text-center mb-3">
+                    <a href="#" class="btn btn-facebook btn-lg text-white rounded-0 text-capitalize mb-2">Facebook</a>
+                    <a href="#" class="btn btn-twitter btn-lg text-white rounded-0 text-capitalize mb-2">Twitter</a>
+                    <a href="#" class="btn btn-google btn-lg text-white rounded-0 text-capitalize mb-2">Google +</a>
+                  </div>
+                  <div class="text-center Montserrat jio-font-weight-500">
+                    <span>Don't have an account? <a href="#" class="text-dark register_form">Sign Up!</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Register Form -->
+      <div class="user_register">
+        <section class="p-0">
+          <div class="background-image-maker gradient gradient-full rounded"></div>
+          <div class="holder-image">
+            <img src="dist/images/bg2.jpg" alt="" class="img-fluid d-none">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 text-white px-0">
+                <div class="p-5">
+                  <div class="heading pb-4">
+                    <h1 class="mb-2 text-white">Welcome.</h1>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt vivamus elementum.
+                  </div>
+                  <div class="list-vertical position-relative">
+                    <div class="media pb-5">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-pencil-alt-1"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Sign Up with Jioexchange</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                    <div class="media pb-5">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-ui-user"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Sign In Account</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                    <div class="media">
+                      <div class="d-md-flex mr-sm-3 mb-3 mb-md-0">
+                        <span class="item position-relative rounded-circle text-center"><i class="icofont icofont-cart"></i></span>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mb-0 text-white jio-font-weight-500">Buy / Sell Bitcoin</h5>
+                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae justo.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 px-0">
+                <div class="p-5 bg-white rounded-right">
+                  <div class="heading pb-4">
+                    <h2 class="mb-2">Sign Up</h2>
+                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend enim. Liquam lorem ante dapibus in viverra.
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="text" class="form-control brd-light rounded-0 pl-5" placeholder="User name">
+                    <div class="form-icon">
+                      <i class="icofont icofont-user-alt-7"></i>
+                    </div>
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="text" class="form-control brd-light rounded-0 pl-5" placeholder="Email">
+                    <div class="form-icon">
+                      <i class="icofont icofont-envelope-open"></i>
+                    </div>
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="password" class="form-control brd-light rounded-0 pl-5" placeholder="Password">
+                    <div class="form-icon">
+                      <i class="icofont icofont-key"></i>
+                    </div>
+                  </div>
+                  <div class="clearfix my-3">
+                    <div class="float-sm-left text-center text-sm-left">
+                      <div class="check d-inline-block mr-2">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2" class="mb-0">I Accept the <a href="#" class="text-light"><u>Terms & Services</u></a></label>
+                      </div>
+                    </div>
+                    <div class="float-sm-right text-center text-sm-right">
+                      <a href="javascript:;" class="text-light roboto">Forget Password</a>
+                    </div>
+                  </div>
+                  <div class="clearfix my-3">
+                    <a href="#" class="btn btn-primary btn-block btn-lg rounded-0">Sign Up</a>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-center or mx-auto bg-white">Or</div>
+                  <div class="social-buttons text-center mb-3">
+                    <a href="#" class="btn btn-facebook btn-lg text-white rounded-0 text-capitalize mb-2">Facebook</a>
+                    <a href="#" class="btn btn-twitter btn-lg text-white rounded-0 text-capitalize mb-2">Twitter</a>
+                    <a href="#" class="btn btn-google btn-lg text-white rounded-0 text-capitalize mb-2">Google +</a>
+                  </div>
+                  <div class="text-center Montserrat jio-font-weight-500">
+                    <span>Already have an account? <a href="#" class="text-dark loginform_link">Sign In!</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- End Login /Register Form-->
+  <!-- header -->
+  <header id="header-fix" class="header-2">
+    <div class="sticky-navbar">
+      <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-light py-lg-0 py-3 rounded">
+          <a class="navbar-brand" href="index-2.html"><img src="dist/images/site-logo.png" alt="" class="img-fluid" /></a>
+          <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown active">
+                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Home <i class="icofont icofont-simple-down"></i></a>
+                <ul class="dropdown-menu rounded-0 border-0 py-0">
+                  <li><a href="index.html">Home 1</a></li>
+                  <li><a href="index-2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Pages <i class="icofont icofont-simple-down"></i></a>
+                <ul class="dropdown-menu rounded-0 border-0 py-0">
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="coming-soon.html">Coming Soon</a></li>
+                  <li><a href="error-404.html">Error 404</a></li>
+                  <li><a href="faq.html">Faq</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li class="dropdown-submenu"><a tabindex="-1" href="#">Services</a>
+                    <ul class="dropdown-menu rounded-0 border-0 py-0">
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="service-details.html">Services Details</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Blog <i class="icofont icofont-simple-down"></i></a>
+                <ul class="dropdown-menu rounded-0 border-0 py-0">
+                  <li><a href="blog.html">Blog Grid</a></li>
+                  <li><a href="single-blog.html">Single Blog</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="header-right my-2 my-lg-0 ml-lg-5 d-none d-lg-block">
+              <a href="#modal" class="login_form"><img src="dist/images/sign-in.png" alt="" class="img-fluid mr-4" /></a>
+              <a href="#"><img src="dist/images/bit-wallet.png" alt="" class="img-fluid" /></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--End header -->
+
     <%= yield %>
+
+
+
   </body>
 </html>
