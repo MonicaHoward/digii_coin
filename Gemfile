@@ -35,6 +35,8 @@ gem 'jquery-rails'
 gem 'sprockets-rails'
 gem 'popper_js', '~> 1.12.9'
 
+gem 'font-awesome-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
