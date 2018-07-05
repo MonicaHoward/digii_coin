@@ -224,7 +224,7 @@
     <div class="sticky-navbar">
       <div class="container">
         <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-light py-lg-0 py-3 rounded">
-          <a class="navbar-brand" href="index-2.html"><img src="dist/images/site-logo.png" alt="" class="img-fluid" />DigiiCoin</a>
+          <a><%= link_to 'DigiiCoin', new_crypto_url, class: "navbar-brand" %></a>
           <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
@@ -272,8 +272,6 @@
   <!--End header -->
 
     <%= yield %>
-
-
 
   </body>
 </html>
