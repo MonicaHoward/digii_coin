@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'home/index'
 
-
+  get 'home/news'
   get 'home/about'
 
   root 'home#index'
