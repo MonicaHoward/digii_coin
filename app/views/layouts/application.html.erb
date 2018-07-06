@@ -15,6 +15,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+
+  <%= render 'layouts/header' %>
+
   <!-- Login /Register Form-->
   <div id="modal" class="popupContainer">
     <header class="popupHeader">
@@ -221,61 +224,7 @@
   <!-- End Login /Register Form-->
 
 
-  <!-- header -->
-  <header id="header-fix" class="header-2">
-    <div class="sticky-navbar">
-      <div class="container">
-        <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-light py-lg-0 py-3 rounded">
-          <a class="navbar-brand" href="index-2.html"><img src="dist/images/site-logo.png" alt="" class="img-fluid" /></a>
-          <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown active">
-                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Home <i class="icofont icofont-simple-down"></i></a>
-                <ul class="dropdown-menu rounded-0 border-0 py-0">
-                  <li><a href="index.html">Home 1</a></li>
-                  <li><a href="index-2.html">Home 2</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Pages <i class="icofont icofont-simple-down"></i></a>
-                <ul class="dropdown-menu rounded-0 border-0 py-0">
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="coming-soon.html">Coming Soon</a></li>
-                  <li><a href="error-404.html">Error 404</a></li>
-                  <li><a href="faq.html">Faq</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li class="dropdown-submenu"><a tabindex="-1" href="#">Services</a>
-                    <ul class="dropdown-menu rounded-0 border-0 py-0">
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="service-details.html">Services Details</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Blog <i class="icofont icofont-simple-down"></i></a>
-                <ul class="dropdown-menu rounded-0 border-0 py-0">
-                  <li><a href="blog.html">Blog Grid</a></li>
-                  <li><a href="single-blog.html">Single Blog</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-            </ul>
-            <div class="header-right my-2 my-lg-0 ml-lg-5 d-none d-lg-block">
-              <a href="#modal" class="login_form"><img src="dist/images/sign-in.png" alt="" class="img-fluid mr-4" /></a>
-              <a href="#"><img src="dist/images/bit-wallet.png" alt="" class="img-fluid" /></a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <!--End header -->
+
 
   <!-- Revolution Slider -->
   <div class="p-0">
