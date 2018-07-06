@@ -518,18 +518,21 @@ section {
 
 .canvasjs-chart-credit, .canvasjs-chart-toolbar {
   display: none; }
+.calculator {
+  background-color: rgb(212,211,221);
+}
 
-.calculater .form-icon, .input-group .form-icon {
-  left: 12px; }
+//.calculater .form-icon, .input-group .form-icon {
+//  left: 12px; }
+//
+//.calculater .form-control, .input-group .form-control {
+//  background-color: #fff; }
+//.calculater .form-control:focus, .input-group .form-control:focus {
+//  border-color: #fff !important;
+//  background-color: #333; }
 
-.calculater .form-control, .input-group .form-control {
-  background-color: #fff; }
-.calculater .form-control:focus, .input-group .form-control:focus {
-  border-color: #fff !important;
-  background-color: #fff; }
-
-.calculater .cal-form, .input-group .cal-form {
-  margin-top: -115px; }
+//.calculater .cal-form, .input-group .cal-form {
+//  margin-top: -90px; }
 
 /*======================== Features Css ===============================*/
 .feature .feature-icon {
@@ -1001,3 +1004,23 @@ marquee {
     margin-right: 5px; }
   .h6, h6 {
     font-size: 0.8rem; } }
+
+
+//HEADER CSS
+.overflow-hidden { overflow: hidden; }
+
+//INDEX CSS
+.index-bg {
+  position: fixed;
+  //top: 50%;
+  //left: 50%;
+  //min-width: 100%;
+  //min-height: 100%;
+  //width: auto;
+  //height: auto;
+  //z-index: -100;
+  //-webkit-transform: translateX(-50%) translateY(-50%);
+  //transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(to right, rgba(212,211,221, .9), rgba(239, 239, 187, 0.9)), image-url('bitcoin.jpg') no-repeat;
+  background-size: cover;
+}
