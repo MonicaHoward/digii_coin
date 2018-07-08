@@ -3,7 +3,7 @@
     <h1 class="display-4 font-weight-normal"><br/><br/> DigiiCoin</h1>
     <p class="lead font-weight-normal">A Crypto Investor's Best Friend</p>
   </div>
-
+ <%= @coins %>
 </div>
 
 <!-- Calculator  -->
@@ -17,14 +17,17 @@
     <div class="row">
       <div class="col-12 col-lg-3 wow fadeIn mb-4 mb-lg-0 text-center text-lg-left" data-animate="fadeIn" data-duration="1.0s"             data-delay="0.2s" >
         <h2 class="mb-2 text-white">Cryptocurrency Calculator</h2>
-        <h6 class="jio-font-weight-500 text-white mb-0"><i class="ion-arrow-graph-up-right"></i> Bitcoin <span class="badge       badge-danger text-uppercase">live</span> Pricing Table</h6>
+        <h6 class="jio-font-weight-500 text-white mb-0"><i class="ion-arrow-graph-up-right"></i> Check the Value of Your Cryptocurrency</h6>
       </div>
-      <div class="col-12 col-lg-8 ml-auto wow fadeIn text-center text-lg-left" data-animate="fadeIn" data-duration="1.0s"       data-delay="0.4s" >
+      <div class="col-12 col-lg-8 ml-auto wow fadeIn text-center text-lg-left" data-animate="fadeIn" data-duration="1.0s" data-delay="0.4s" >
         <div class="row">
           <div class="col-12 col-md-6">
+
             <div class="form-group position-relative">
               <select class="form-control border-white pl-5" name="coin" id="coin">
-                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="BTC">Bitcoin (BTC)
+
+                </option>
                 <option value="LTC">Litecoin (LTC)</option>
                 <option value="XRP">Ripple (XRP)</option>
               </select>
@@ -33,10 +36,9 @@
               </div>
             </div>
             <div class="form-group position-relative  mb-md-0">
-
-              <select class="form-control border-white pl-5" name="currency" id="currency">
-                <option value="USD">US Dollar (USD)</option>
-              </select>
+              <%= form_tag home_about_path, :method => 'POST' do %>
+                <%= text_field_tag 'name', nil, placeholder: 'Enter Currency Symbol', class:                'form-control border-white pl-5' %>
+              <% end %>
               <div class="form-icon">
                 <img src="dist/images/dollar.png" alt="" class="img-fluid">
               </div>
@@ -48,6 +50,8 @@
             </div>
             <div class="form-group mb-0">
               <input type="text" class="form-control border-white currencyvalue" placeholder="40,300,000">
+
+
             </div>
           </div>
         </div>
